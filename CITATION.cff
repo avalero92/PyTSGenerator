@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "Si utilizas este software, por favor cítalo usando los metadatos de este fichero."
+title: "PyTSGenerator: A modular desktop tool for remote sensing time series generation from Copernicus Land products"
+version: "1.1.0"
+date-released: "2025-01-01"
+license: MIT
+
+authors:
+  - family-names: "Valero-Jorge"
+    given-names: "Alexey"
+    affiliation: "Centro de Investigación y Tecnología Agroalimentaria de Aragón (CITA)"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+
+abstract: >
+  PyTSGenerator is a modular desktop application for automated generation of
+  remote sensing time series from Copernicus Land Monitoring Service (CLMS) products.
+  It provides a guided workflow covering download of Short-Term Plant Phenology
+  Indicator (STPPI) and High-Resolution Vegetation Phenology and Productivity
+  (HR-VPP) products via the WEkEO HDA API, normalised file renaming for temporal
+  indexing, and zonal statistics extraction over vector geometries (polygons and
+  points). The tool is built on a modular architecture (tkinter GUI) that allows
+  straightforward extension with new processing modules.
+
+keywords:
+  - remote sensing
+  - time series
+  - phenology
+  - Copernicus
+  - CLMS
+  - HR-VPP
+  - STPPI
+  - zonal statistics
+  - vegetation
+  - GeoTIFF
+  - Python
+
+repository-code: "https://github.com/YOUR_USERNAME/PyTSGenerator"
+doi: "10.5281/zenodo.XXXXXXX"
+
+references:
+  - type: software
+    title: "WEkEO HDA Python Client"
+    url: "https://github.com/wekeo/hda"
+  - type: dataset
+    title: "Copernicus Land Monitoring Service — HR-VPP"
+    authors:
+      - name: "European Environment Agency (EEA)"
+    url: "https://land.copernicus.eu/en/products/vegetation/high-resolution-vegetation-phenology-and-productivity"
+  - type: dataset
+    title: "Copernicus Land Monitoring Service — STPPI"
+    authors:
+      - name: "European Environment Agency (EEA)"
+    url: "https://land.copernicus.eu/en/products/vegetation/short-term-plant-phenology-indicator"
