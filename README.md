@@ -40,7 +40,7 @@ Cada paso es independiente y puede ejecutarse por separado.
 ### 1. Clonar el repositorio
 
 ``` bash
-git clone https://github.com/YOUR_USERNAME/PyTSGenerator.git
+git clone https://github.com/avalero92/PyTSGenerator.git
 cd PyTSGenerator
 ```
 
