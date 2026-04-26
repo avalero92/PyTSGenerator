@@ -2,7 +2,7 @@
 
 **PyTSGenerator** es una herramienta de escritorio modular desarrollada en Python para la generación automatizada de series temporales de teledetección a partir de productos del *Copernicus Land Monitoring Service* (CLMS). Proporciona un flujo de trabajo guiado —con interfaz gráfica, sin necesidad de programar— que abarca desde la descarga de imágenes hasta la extracción de estadísticos zonales sobre geometrías vectoriales.
 
-PyTSGenerator es la evolución natural de [TSGenerator](https://github.com/avalero92/TSGenerator), paquete previo del mismo autor desarrollado en R, al que extiende con soporte para STPPI, una interfaz gráfica de escritorio multiplataforma y una arquitectura modular que facilita su mantenimiento y ampliación.
+PyTSGenerator es la evolución natural de [TSGenerator](https://github.com/avalero92/TSGenerator), paquete previo del mismo autor desarrollado en R, al que extiende con soporte para *Seasonal Trajectories Plant Phenology Index* (ST-PPI), una interfaz gráfica de escritorio multiplataforma y una arquitectura modular que facilita su mantenimiento y ampliación.
 
 > Desarrollado por **Alexey Valero-Jorge** — Centro de Investigación y Tecnología Agroalimentaria de Aragón (CITA).
 
@@ -10,7 +10,7 @@ PyTSGenerator es la evolución natural de [TSGenerator](https://github.com/avale
 
 ## ¿Por qué PyTSGenerator?
 
-Los productos HR-VPP (*High-Resolution Vegetation Phenology and Productivity*) y STPPI (*Short-Term Plant Phenology Indicator*) del CLMS son datos de alto valor para el seguimiento de la fenología vegetal a escala regional y continental. Sin embargo, su acceso y procesamiento presentan una barrera importante: **no existe ninguna aplicación de escritorio que integre la descarga, el renombrado y la agregación zonal de estos productos en un único flujo de trabajo guiado**.
+Los productos HR-VPP (*High-Resolution Vegetation Phenology and Productivity*) del CLMS son datos de alto valor para el seguimiento de la fenología vegetal a escala regional y continental. Sin embargo, su acceso y procesamiento presentan una barrera importante: **no existe ninguna aplicación de escritorio que integre la descarga, el renombrado y la agregación zonal de estos productos en un único flujo de trabajo guiado**.
 
 Las principales alternativas disponibles son:
 
@@ -23,7 +23,7 @@ Las principales alternativas disponibles son:
 | Portal WEkEO (web) | ✅ | ✅ | ✅ | ❌ | ✅ |
 | Scripts ad hoc | ❌ | ✅ | ✅ | ✅ | ❌ |
 
-> † TSGenerator es el trabajo previo del mismo autor que inspiró PyTSGenerator. Requiere conocimientos de R y no dispone de interfaz gráfica ni soporte para productos STPPI.
+> † TSGenerator es el trabajo previo del mismo autor que inspiró PyTSGenerator. Requiere conocimientos de R y no dispone de interfaz gráfica ni soporte para productos HR-VPP.
 
 PyTSGenerator está diseñado para investigadores, técnicos de administraciones y estudiantes que necesitan generar series temporales de forma reproducible y sistemática sin requerir conocimientos avanzados de programación.
 
@@ -31,8 +31,8 @@ PyTSGenerator está diseñado para investigadores, técnicos de administraciones
 
 ## Características principales
 
-- **Descarga de productos STPPI** desde la API HDA de WEkEO/Copernicus.
-- **Descarga de productos HR-VPP** con soporte para múltiples tipos de producto (SOSD, EOSD, MAXD, MINV, MAXV, AMPL, LENGTH, SPROD, TPROD, QFLAG2).
+- **Descarga de productos ST-PPI** desde la API HDA de WEkEO/Copernicus.
+- **Descarga de productos VPP** con soporte para múltiples tipos de producto (SOSD, EOSD, MAXD, MINV, MAXV, AMPL, LENGTH, SPROD, TPROD, QFLAG2).
 - **Renombrado normalizado** de archivos TIF, extrayendo la fecha `YYYYMMDD` del nombre original para facilitar el manejo de series temporales.
 - **Agregación zonal** sobre GeoTIFFs: extracción de estadísticos (media, mediana, desviación estándar, percentiles, suma ponderada, etc.) usando geometrías vectoriales (polígonos o puntos).
 - **Post-procesado opcional** tras la descarga: reproyección de CRS y recorte al área de interés mediante shapefile.
@@ -43,7 +43,7 @@ PyTSGenerator está diseñado para investigadores, técnicos de administraciones
 ## Flujo de trabajo recomendado
 
 ```
-[1] Descarga STPPI  →  [2] Descarga HR-VPP  →  [3] Renombrado HR-VPP  →  [4] Agregación Zonal
+[1] Descarga ST-PPI  →  [2] Descarga VPP  →  [3] Renombrado de productos  →  [4] Agregación Zonal
 ```
 
 Cada paso es independiente y puede ejecutarse por separado.
@@ -125,8 +125,8 @@ PyTSGenerator/
 └── modules/
     ├── base.py                  # Clase base BaseModule
     ├── download_base.py         # Lógica común de descarga HDA
-    ├── download_stppi.py        # Módulo descarga STPPI
-    ├── download_hrvpp.py        # Módulo descarga HR-VPP
+    ├── download_stppi.py        # Módulo descarga ST-PPI
+    ├── download_hrvpp.py        # Módulo descarga VPP
     ├── renames_hrvpp.py         # Módulo renombrado TIF
     ├── agregacion_zonal.py      # Módulo agregación zonal
     ├── reproject_mixin.py       # Mixin reproyección de CRS
