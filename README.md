@@ -17,7 +17,7 @@ Las principales alternativas disponibles son:
 | Herramienta | Interfaz gráfica | HR-VPP | STPPI | Agregación zonal | Sin programar |
 |---|:---:|:---:|:---:|:---:|:---:|
 | **PyTSGenerator** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| [TSGenerator](https://github.com/avalero92/TSGenerator) (librería R) † | ❌ | ✅ | ❌ | ✅ | ❌ |
+| [TSGenerator](https://github.com/avalero92/TSGenerator) (librería R) † | ✅ | ✅ | ✅ | ✅ | ❌ |
 | `hda` (librería Python) | ❌ | ✅ | ✅ | ❌ | ❌ |
 | `sen2r` (librería R) | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Portal WEkEO (web) | ✅ | ✅ | ✅ | ❌ | ✅ |
