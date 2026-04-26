@@ -18,6 +18,7 @@ Las únicas alternativas disponibles hasta ahora son:
 | `hda` (librería Python) | ❌ | ✅ | ✅ | ❌ | ❌ |
 | `sen2r` (librería R) | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Portal WEkEO (web) | ✅ | ✅ | ✅ | ❌ | ✅ |
+| TSGenerator | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Scripts ad hoc | ❌ | ✅ | ✅ | ✅ | ❌ |
 
 PyTSGenerator está diseñado para investigadores, técnicos de administraciones y estudiantes que necesitan generar series temporales de forma reproducible y sistemática sin requerir conocimientos avanzados de programación.
