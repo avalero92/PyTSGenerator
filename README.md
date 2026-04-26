@@ -2,6 +2,8 @@
 
 **PyTSGenerator** es una herramienta de escritorio modular desarrollada en Python para la generación automatizada de series temporales de teledetección a partir de productos del *Copernicus Land Monitoring Service* (CLMS). Proporciona un flujo de trabajo guiado —con interfaz gráfica, sin necesidad de programar— que abarca desde la descarga de imágenes hasta la extracción de estadísticos zonales sobre geometrías vectoriales.
 
+PyTSGenerator es la evolución natural de [TSGenerator](https://github.com/avalero92/TSGenerator), paquete previo del mismo autor desarrollado en R, al que extiende con soporte para STPPI, una interfaz gráfica de escritorio multiplataforma y una arquitectura modular que facilita su mantenimiento y ampliación.
+
 > Desarrollado por **Alexey Valero-Jorge** — Centro de Investigación y Tecnología Agroalimentaria de Aragón (CITA).
 
 ---
@@ -10,16 +12,18 @@
 
 Los productos HR-VPP (*High-Resolution Vegetation Phenology and Productivity*) y STPPI (*Short-Term Plant Phenology Indicator*) del CLMS son datos de alto valor para el seguimiento de la fenología vegetal a escala regional y continental. Sin embargo, su acceso y procesamiento presentan una barrera importante: **no existe ninguna aplicación de escritorio que integre la descarga, el renombrado y la agregación zonal de estos productos en un único flujo de trabajo guiado**.
 
-Las únicas alternativas disponibles hasta ahora son:
+Las principales alternativas disponibles son:
 
 | Herramienta | Interfaz gráfica | HR-VPP | STPPI | Agregación zonal | Sin programar |
 |---|:---:|:---:|:---:|:---:|:---:|
 | **PyTSGenerator** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| [TSGenerator](https://github.com/avalero92/TSGenerator) (librería R) † | ❌ | ✅ | ❌ | ✅ | ❌ |
 | `hda` (librería Python) | ❌ | ✅ | ✅ | ❌ | ❌ |
 | `sen2r` (librería R) | ❌ | ❌ | ❌ | ✅ | ❌ |
 | Portal WEkEO (web) | ✅ | ✅ | ✅ | ❌ | ✅ |
-| TSGenerator | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Scripts ad hoc | ❌ | ✅ | ✅ | ✅ | ❌ |
+
+> † TSGenerator es el trabajo previo del mismo autor que inspiró PyTSGenerator. Requiere conocimientos de R y no dispone de interfaz gráfica ni soporte para productos STPPI.
 
 PyTSGenerator está diseñado para investigadores, técnicos de administraciones y estudiantes que necesitan generar series temporales de forma reproducible y sistemática sin requerir conocimientos avanzados de programación.
 
